@@ -1,0 +1,65 @@
+<html>
+<head>
+	<title></title>
+
+	<style>
+		.red { background-color: red;}
+
+	</style>
+</head>
+<body>
+
+	<a href="#toggle">toggle</a>
+
+	<br /><br />
+
+	<a href="#add">add</a>
+	<div id="output"></div>
+	<br />
+
+	<form>
+		<ul>
+			<li>
+				<label>Foo</label><input />
+			</li>
+			<li>
+				<label>Bar</label><input />
+			</li>
+		</ul>
+	</form>
+
+
+	<br />
+
+	<img src="http://placekitten.com/g/200/300" /><br />
+	<img src="http://placekitten.com/g/200/300" /><br />
+	<img src="http://placekitten.com/g/200/300" /><br />
+	<img src="http://placekitten.com/g/200/300" /><br />
+	<img src="http://placekitten.com/g/200/300" /><br />
+	<img src="http://placekitten.com/g/200/300" /><br />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="mimiq.js"></script>
+
+	<script>
+		$( function()
+		{
+			$( "a[href$='#toggle']" ).click( function( e )
+			{
+				e.preventDefault();
+
+				$( this ).toggleClass( "red" );
+			} );
+
+			$( "a[href$='#add']" ).click( function( e )
+			{
+				e.preventDefault();
+
+				$( "#output" ).append( "blaat<br />" );
+			} );
+
+		} );
+	</script>
+
+</body>
+</html>
